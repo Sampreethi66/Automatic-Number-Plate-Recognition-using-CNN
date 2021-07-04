@@ -1,0 +1,49 @@
+print("content-type: text/html")
+print()
+
+
+print('''<style>
+pre{
+color: black;
+font-weight: bold;
+font-size: 20px;
+}
+</style>''')
+
+
+import cgi
+import subprocess as sb
+
+fs = cgi.FieldStorage()
+
+plate_no = fs.getvalue("plate_no")
+
+
+if plate_no == "KA 05 NB 1786":
+    print("<body style='padding: 40px;'>")
+    print('<h1 style="color:#df405a;" >Output</h1>')
+    print('''<pre>
+    Registration Name : Bokka sampreethi
+    License No : 4567823589
+    Make / Model : BABA HYUNDAI / VERNA
+    Registration Date : 17/10/2010
+    Registering Authority : Kanartaka , INDIA
+    Insurance Upto : 15/11/2022
+    Fitness Upto : 5/10/2030
+    </pre>''')
+    print("</body>")
+    
+else plate_no == "MH 12 HZ 0148":
+    print("<body style='padding: 40px;'>")
+    print('<h1 style="color:#df405a;" >Output</h1>')
+    print('''<pre>
+    Registration Name : B Mahesh
+    License No : 234567892345
+    Make / Model : White / AUDI
+    Registration Date : 23/9/2013
+    Registering Authority : Maharashtra, INDIA
+    Vehicle Class : MCWG
+    Insurance Upto : 18/10/2022
+    Fitness Upto : 6/12/2030
+    </pre>''')
+    print("</body>")
